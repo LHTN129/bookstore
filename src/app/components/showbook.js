@@ -34,7 +34,7 @@ export default function ShowBook({ books, AddButton, userIdStatus, userId }) {
 
   if (userIdStatus && AddButton === "False") {
     return (
-      <ul>
+      <ul className="ml-5">
         {books.map((book) => (
           <li key={book.sku_id}>
             <RemoveBook skuId={book.sku_id} />
@@ -47,7 +47,7 @@ export default function ShowBook({ books, AddButton, userIdStatus, userId }) {
     );
   } else if (userIdStatus && AddButton === "True") {
     return (
-      <ul>
+      <ul className="ml-5">
         {books.map((book) => (
           <li key={book.id}>
             <AddBook bookId={book.id} userId={userId} />
@@ -60,9 +60,12 @@ export default function ShowBook({ books, AddButton, userIdStatus, userId }) {
     );
   } else {
     return (
-      <ul>
+      <ul className="ml-5">
         {books.map((book) => (
-          <li key={book.id}>
+          <li
+            className="ml-5 space-y-4 list-disc list-inside dark:text-white text-lg"
+            key={book.id}
+          >
             <Link href={{ pathname: "/bookdetails", query: { id: book.id } }}>
               {book.name}
             </Link>

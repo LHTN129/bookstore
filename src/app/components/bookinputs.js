@@ -20,10 +20,10 @@ export default function BookInputs({ userId }) {
 
   return (
     <>
-      <label>
+      <label className="ml-5">
         Name:
         <input
-          className="text-black"
+          className="text-gray-900 p-1.5 text-sm mx-5 gap-6 md:grid-cols-2"
           type="text"
           value={BookName}
           onChange={(e) => setName(e.target.value)}
@@ -32,7 +32,7 @@ export default function BookInputs({ userId }) {
       <label>
         Description:
         <input
-          className="text-black"
+          className="text-gray-900 p-1.5 text-sm mx-5 gap-6 md:grid-cols-2"
           type="text"
           value={BookDesc}
           onChange={(e) => setDesc(e.target.value)}
@@ -41,7 +41,7 @@ export default function BookInputs({ userId }) {
       <label>
         Price:
         <input
-          className="text-black"
+          className="text-gray-900 p-1.5 text-sm mx-5 gap-6 md:grid-cols-2"
           type="number"
           value={BookPrice}
           onChange={(e) => setPrice(e.target.value)}
@@ -50,7 +50,7 @@ export default function BookInputs({ userId }) {
       <label>
         ISBN-10:
         <input
-          className="text-black"
+          className="text-gray-900 p-1.5 text-sm mx-5 gap-6 md:grid-cols-2"
           type="text"
           value={BookISBN10}
           onChange={(e) => setIsbn(e.target.value)}
@@ -59,7 +59,7 @@ export default function BookInputs({ userId }) {
       <label>
         Buy Link:
         <input
-          className="text-black"
+          className="text-gray-900 p-1.5 text-sm mx-5 gap-6 md:grid-cols-2"
           type="text"
           value={BookBuyLink}
           onChange={(e) => setBuyLink(e.target.value)}
