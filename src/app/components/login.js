@@ -15,7 +15,7 @@ export default function Login() {
       email,
       password,
       options: {
-        emailRedirectTo: `http://localhost:3000/api/auth/callback`,
+        emailRedirectTo: `bookstore-rust.vercel.app/auth/callback`,
       },
     });
     router.refresh();
